@@ -4,6 +4,7 @@ import { StyledEngineProvider } from '@mui/styled-engine';
 
 import HomePage from "@/page/HomePage";
 import WeekPage from "@/page/week/WeekPage";
+import MonthPage from "@/page/month/MonthPage";
 /** Style */
 import AppStyled from "@/App.styled";
 
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/week" element={<WeekPage/>}/>
+            <Route path="/month" element={<MonthPage/>}/>
           </Routes>
 
         </BrowserRouter>
