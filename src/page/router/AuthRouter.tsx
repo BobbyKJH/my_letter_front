@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet, Navigate } from "react-router-dom";
 /** Components */
 import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
 
 const AuthRoutes: React.FC = () => {
 	return (
@@ -9,8 +10,9 @@ const AuthRoutes: React.FC = () => {
 			<>
 				<Header/>
 
-
 				<Outlet/>
+
+        <Footer/>
 			</>
 			:
 			// @ts-ignore
