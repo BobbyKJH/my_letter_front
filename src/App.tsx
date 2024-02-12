@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { StyledEngineProvider } from '@mui/styled-engine';
+import { RecoilRoot } from 'recoil';
 
 import HomePage from "@/page/HomePage";
 import WeekPage from "@/page/week/WeekPage";
@@ -14,21 +15,23 @@ import AuthRoutes from "./page/router/AuthRouter";
 const App: React.FC = () => {
 
   return (
-    <StyledEngineProvider injectFirst>
-        <BrowserRouter>
-          <AppStyled/>
+    <RecoilRoot>
+      <StyledEngineProvider injectFirst>
+          <BrowserRouter>
+            <AppStyled/>
 
-          <Routes>
-            <Route element={<AuthRoutes/>}>
-              <Route path="/" element={<HomePage/>}/>
-              <Route path="/week" element={<WeekPage/>}/>
-              <Route path="/month" element={<MonthPage/>}/>
-              <Route path="/year" element={<YearPage/>}/>
-            </Route>
-          </Routes>
+            <Routes>
+              <Route element={<AuthRoutes/>}>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/week" element={<WeekPage/>}/>
+                <Route path="/month" element={<MonthPage/>}/>
+                <Route path="/year" element={<YearPage/>}/>
+              </Route>
+            </Routes>
 
-        </BrowserRouter>
-    </StyledEngineProvider>
+          </BrowserRouter>
+      </StyledEngineProvider>
+    </RecoilRoot>
   )
 }
 
