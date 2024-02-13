@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { StyledEngineProvider } from '@mui/styled-engine';
+/** Atom */
 import { RecoilRoot } from 'recoil';
-
+/** Page */
 import HomePage from "@/page/HomePage";
 import WeekPage from "@/page/week/WeekPage";
 import YearPage from "@/page/year/YearPage";
