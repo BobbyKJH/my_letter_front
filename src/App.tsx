@@ -10,7 +10,7 @@ import YearPage from "@/page/year/YearPage";
 import MonthPage from "@/page/month/MonthPage";
 /** Style */
 import AppStyled from "@/App.styled";
-import AuthRoutes from "./page/router/AuthRouter";
+import AuthRoutes from "@/page/router/AuthRouter";
 
 
 const App: React.FC = () => {
